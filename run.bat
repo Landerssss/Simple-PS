@@ -1,25 +1,25 @@
 @echo off
 echo ========================================================
-echo æ­£åœ¨å¯åŠ¨ ç®€æ˜“På›¾å·¥å…·...
-echo é¦–æ¬¡è¿è¡Œéœ€è¦å®‰è£…ä¾èµ–ï¼Œè¯·è€å¿ƒç­‰å¾…...
+echo ÕýÔÚÆô¶¯ ¼òÒ×PÍ¼¹¤¾ß...
+echo Ê×´ÎÔËÐÐÐèÒª°²×°ÒÀÀµ£¬ÇëÄÍÐÄµÈ´ý...
 echo ========================================================
 
-:: æ£€æŸ¥æ˜¯å¦å­˜åœ¨è™šæ‹ŸçŽ¯å¢ƒï¼Œä¸å­˜åœ¨åˆ™åˆ›å»º
+:: ¼ì²éÊÇ·ñ´æÔÚÐéÄâ»·¾³£¬²»´æÔÚÔò´´½¨
 if not exist "venv" (
-    echo åˆ›å»ºè™šæ‹ŸçŽ¯å¢ƒ...
+    echo ´´½¨ÐéÄâ»·¾³...
     python -m venv venv
 )
 
-:: æ¿€æ´»è™šæ‹ŸçŽ¯å¢ƒ
+:: ¼¤»îÐéÄâ»·¾³
 call venv\Scripts\activate
 
-:: å®‰è£…ä¾èµ–ï¼ˆå¦‚æžœå·²ç»å®‰è£…è¿‡ï¼Œpipä¼šè‡ªåŠ¨è·³è¿‡ï¼‰
-echo æ­£åœ¨æ£€æŸ¥å¹¶å®‰è£…ä¾èµ–...
+:: °²×°ÒÀÀµ£¨Èç¹ûÒÑ¾­°²×°¹ý£¬pip»á×Ô¶¯Ìø¹ý£©
+echo ÕýÔÚ¼ì²é²¢°²×°ÒÀÀµ...
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-:: å¯åŠ¨åº”ç”¨
+:: Æô¶¯Ó¦ÓÃ
 echo.
-echo æ­£åœ¨æ‰“å¼€æµè§ˆå™¨...
+echo ÕýÔÚ´ò¿ªä¯ÀÀÆ÷...
 streamlit run app.py
 
 pause
